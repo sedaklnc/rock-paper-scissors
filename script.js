@@ -1,12 +1,15 @@
+//Main variable
 const choices = ['ROCK', 'PAPER', 'SCISSORS'];
 let computerScore = 0;
 let playerScore = 0;
 
+//Computer Selected random choice
 function computerPlay() {
     indexNum = Math.round(Math.random() * (choices.length - 1));
     return choices[indexNum];
 }
 
+//UserPlay function which is selected rock or paper or scissors also Quit choice is possible
 function userPlay() {
     userInput = prompt('🪨 📜 ✂️ Which One ', "").toUpperCase().trim();
     if (userInput === 'ROCK' || userInput === 'SCISSORS' || userInput === 'PAPER' || userInput === 'Q') {
@@ -17,6 +20,7 @@ function userPlay() {
     }
 }
 
+//This function return the result of single round
 function determineWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) return 'TIE';
     if (playerChoice === 'ROCK') {
@@ -33,6 +37,7 @@ function determineWinner(playerChoice, computerChoice) {
     }
 }
 
+// if you want to quit this func will call
 function quitGame() {
     alert("Quiting game...");
     return result(computerScore,playerScore);
@@ -44,6 +49,7 @@ function quitGame() {
   console.log(computerSelection)
   console.log(determineWinner(playerSelection,computerSelection));*/
 
+// Game is started
 function game() {
     for (let i = 0; i < 5; i++) {
         let playerSelection = userPlay();
@@ -86,6 +92,7 @@ function game() {
     result(computerScore,playerScore)       
 }
 
+//Result function shows the final result
 function result(computerScore,playerScore){
     let x = '⤵'; 
     console.log("%c %s", "color:#00A388; font-size: 16pt",`${x.repeat(20)}`)
@@ -99,10 +106,9 @@ function result(computerScore,playerScore){
     else{
         console.log("%c %s", "color:#79BD8F; font-size: 16pt",`YOU ARE TIED LAST SCORE: ${computerScore} - ${playerScore}`)
     }
-
     x = '⤴'; 
     console.log("%c %s", "color:#00A388; font-size: 16pt",`${x.repeat(20)}`);
 
 }
-
+// function called and game is started
 game()
