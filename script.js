@@ -11,7 +11,7 @@ function computerPlay() {
 
 //UserPlay function which is selected rock or paper or scissors also Quit choice is possible
 function userPlay() {
-    userInput = prompt('🪨 📜 ✂️ Which One ', "").toUpperCase().trim();
+    userInput = prompt('🪨 📜 ✂️ Which One ').toUpperCase();
     if (userInput === 'ROCK' || userInput === 'SCISSORS' || userInput === 'PAPER' || userInput === 'Q') {
         return userInput;
     }
