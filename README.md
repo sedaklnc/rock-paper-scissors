@@ -6,3 +6,6 @@ Turn on the console and enjoy playing rock, paper, scissors with the computer. T
 ## Built With 
 - HTML
 - JS
+
+## DEMO 
+https://sedaklnc.github.io/rock-paper-scissors/
